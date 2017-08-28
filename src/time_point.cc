@@ -1,45 +1,60 @@
 #include "time_point.h"
 
-TimePoint::TimePoint(int year, int month, int day, int hour, int minute)
-: _year(year)
-, _month(month)
-, _day(day)
-, _hour(hour)
-, _minute(minute)
+TimePoint& TimePoint::year(int year)
 {
+	_year.value(year);
+	return *this;
+}
+
+TimePoint& TimePoint::month(int month)
+{
+	_month.value(month);
+	return *this;
+}
+
+TimePoint& TimePoint::day(int day)
+{
+	_day.value(day);
+	return *this;
+}
+
+TimePoint& TimePoint::hour(int hour)
+{
+	_hour.value(hour);
+	return *this;
 }
 
 int TimePoint::year() const
 {
-	return _year;
+	return _year.value();
 }
 
 int TimePoint::month() const
 {
-	return _month;
+	return _month.value();
 }
 
 int TimePoint::day() const
 {
-	return _day;
+	return _day.value();
 }
 
 int TimePoint::hour() const
 {
-	return _hour;
+	return _hour.value();
 }
 
 int TimePoint::minute() const
 {
-	return _minute;
+	return _minute.value();
 }
 
 bool TimePoint::is_valid() const
 {
 	return
-		_year   >  0 and
-		_month  >  0 and _month  < 13 and
-		_day    >  0 and _day    < 32 and
-		_hour   >= 0 and _hour   < 24 and
-		_minute >= 0 and _minute < 60;
+		(not _year.is_set()   or _year.is_valid())  and
+		(not _month.is_set()  or _month.is_valid()) and
+		(not _day.is_set()    or _day.is_valid())   and
+		(not _hour.is_set()   or _hour.is_valid())  and
+		(not _minute.is_set() or _minute.is_valid());
 }

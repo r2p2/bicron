@@ -4,11 +4,9 @@
 
 TEST_CASE("validity of time points", "[time_point]")
 {
-	REQUIRE(TimePoint(2017,  9, 14, 12, 22).is_valid() == true);
-	REQUIRE(TimePoint(2037,  1,  1,  5, 30).is_valid() == true);
-	REQUIRE(TimePoint( -37,  1,  1,  5, 30).is_valid() == false);
-	REQUIRE(TimePoint(2017,  9, 32, 12, 22).is_valid() == false);
-	REQUIRE(TimePoint(2017, 13, 12, 12, 22).is_valid() == false);
-	REQUIRE(TimePoint(2017, 11, 12, 24, 22).is_valid() == false);
-	REQUIRE(TimePoint(2017, 11, 12, 21, 60).is_valid() == false);
+	REQUIRE(TimePoint().is_valid()                              == true);
+	REQUIRE(TimePoint().year(2017).is_valid()                   == true);
+	REQUIRE(TimePoint().year(-5).is_valid()                     == false);
+	REQUIRE(TimePoint().year(2017).month(12).day(24).is_valid() == true);
+	REQUIRE(TimePoint().year(2017).month(13).day(24).is_valid() == false);
 }

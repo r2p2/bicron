@@ -1,9 +1,15 @@
 #pragma once
 
+#include "unit.h"
+
 class TimePoint
 {
 public:
-	TimePoint(int year, int month, int day, int hour, int minute);
+	TimePoint& year(int);
+	TimePoint& month(int);
+	TimePoint& day(int);
+	TimePoint& hour(int);
+	TimePoint& minute(int);
 
 	int year() const;
 	int month() const;
@@ -14,9 +20,9 @@ public:
 	bool is_valid() const;
 
 private:
-	int const _year;
-	int const _month;
-	int const _day;
-	int const _hour;
-	int const _minute;
+	Year   _year;
+	Month  _month;
+	Day    _day;
+	Hour   _hour;
+	Minute _minute;
 };
