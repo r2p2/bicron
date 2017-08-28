@@ -1,7 +1,8 @@
 #include "rule.h"
 
-Rule::Rule(std::string key, std::string val)
-: _key(std::move(key))
+Rule::Rule(TimePoint tp, std::string key, std::string val)
+: _tp(std::move(tp))
+, _key(std::move(key))
 , _val(std::move(val))
 {
 }
