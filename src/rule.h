@@ -12,6 +12,8 @@ public:
 	std::string key() const;
 	std::string val() const;
 
+	bool is_matching(TimePoint const&) const;
+
 private:
 	TimePoint   const _tp;
 	std::string const _key;

@@ -24,6 +24,12 @@ TimePoint& TimePoint::hour(int hour)
 	return *this;
 }
 
+TimePoint& TimePoint::minute(int minute)
+{
+	_minute.value(minute);
+	return *this;
+}
+
 int TimePoint::year() const
 {
 	return _year.value();
@@ -47,6 +53,31 @@ int TimePoint::hour() const
 int TimePoint::minute() const
 {
 	return _minute.value();
+}
+
+bool TimePoint::has_year() const
+{
+	return _year.is_set();
+}
+
+bool TimePoint::has_month() const
+{
+	return _month.is_set();
+}
+
+bool TimePoint::has_day() const
+{
+	return _day.is_set();
+}
+
+bool TimePoint::has_hour() const
+{
+	return _hour.is_set();
+}
+
+bool TimePoint::has_minute() const
+{
+	return _minute.is_set();
 }
 
 bool TimePoint::is_valid() const

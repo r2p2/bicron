@@ -16,6 +16,7 @@ set (SOURCES
 
 set (SOURCES_TEST
 	tests/dummy_test.cc
+	tests/rule_test.cc
 	tests/time_point_test.cc
 	tests/main.cc
 )

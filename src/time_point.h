@@ -17,6 +17,12 @@ public:
 	int hour() const;
 	int minute() const;
 
+	bool has_year() const;
+	bool has_month() const;
+	bool has_day() const;
+	bool has_hour() const;
+	bool has_minute() const;
+
 	bool is_valid() const;
 
 private:
