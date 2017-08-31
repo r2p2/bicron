@@ -8,6 +8,8 @@ set(CLANG_MINIMUM_VERSION "3.5")
 set(CMAKE_CXX_FLAGS "-std=c++14")
 
 set (SOURCES
+	src/bicron.cc
+	src/config.cc
 	src/rule.cc
 	src/time_point.cc
 )
@@ -15,6 +17,7 @@ set (SOURCES
 ### Test #######################################################################
 
 set (SOURCES_TEST
+	tests/bicron_test.cc
 	tests/dummy_test.cc
 	tests/rule_test.cc
 	tests/time_point_test.cc
