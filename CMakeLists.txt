@@ -32,5 +32,5 @@ add_executable(bicron-test
 target_include_directories(bicron-test
 	PUBLIC src/bicron
 	PUBLIC third_party/
-	Public tests/
+	PUBLIC tests/
 )
