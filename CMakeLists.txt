@@ -10,6 +10,7 @@ set(CMAKE_CXX_FLAGS "-std=c++14")
 set (SOURCES
 	src/bicron/bicron.cc
 	src/bicron/config.cc
+	src/bicron/json_config_builder.cc
 	src/bicron/rule.cc
 	src/bicron/time_point.cc
 )
