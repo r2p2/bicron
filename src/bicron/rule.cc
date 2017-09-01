@@ -1,5 +1,8 @@
 #include "rule.h"
 
+namespace bicron
+{
+
 Rule::Rule(TimePoint tp, std::string key, std::string val)
 : _tp(std::move(tp))
 , _key(std::move(key))
@@ -50,4 +53,6 @@ bool Rule::is_matching(TimePoint const& tp) const
 		return false;
 
 	return true;
+}
+
 }

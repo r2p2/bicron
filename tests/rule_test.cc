@@ -2,6 +2,8 @@
 
 #include <catch.hpp>
 
+using namespace bicron;
+
 TEST_CASE("matching rules", "[rule]")
 {
 	TimePoint now;

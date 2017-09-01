@@ -4,6 +4,9 @@
 
 #include <vector>
 
+namespace bicron
+{
+
 class Config
 {
 public:
@@ -14,3 +17,5 @@ public:
 private:
 	std::vector<Rule> _rules;
 };
+
+}

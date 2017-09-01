@@ -1,5 +1,8 @@
 #include "time_point.h"
 
+namespace bicron
+{
+
 TimePoint& TimePoint::year(int year)
 {
 	_year.value(year);
@@ -88,4 +91,6 @@ bool TimePoint::is_valid() const
 		(not _day.is_set()    or _day.is_valid())   and
 		(not _hour.is_set()   or _hour.is_valid())  and
 		(not _minute.is_set() or _minute.is_valid());
+}
+
 }

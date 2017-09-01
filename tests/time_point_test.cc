@@ -2,6 +2,8 @@
 
 #include <catch.hpp>
 
+using namespace bicron;
+
 TEST_CASE("validity of time points", "[time_point]")
 {
 	REQUIRE(TimePoint().is_valid()                              == true);

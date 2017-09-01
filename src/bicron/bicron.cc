@@ -1,5 +1,8 @@
 #include "bicron.h"
 
+namespace bicron
+{
+
 void Bicron::update(Config cfg)
 {
 	_config = std::move(cfg);
@@ -41,3 +44,4 @@ Bicron::result_t Bicron::status(TimePoint const& tp) const
 	return result;
 }
 
+}

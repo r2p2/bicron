@@ -2,6 +2,9 @@
 
 #include "unit.h"
 
+namespace bicron
+{
+
 class TimePoint
 {
 public:
@@ -32,3 +35,5 @@ private:
 	Hour   _hour;
 	Minute _minute;
 };
+
+}

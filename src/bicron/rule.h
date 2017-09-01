@@ -4,6 +4,9 @@
 
 #include <string>
 
+namespace bicron
+{
+
 class Rule
 {
 public:
@@ -19,3 +22,5 @@ private:
 	std::string const _key;
 	std::string const _val;
 };
+
+}

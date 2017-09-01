@@ -2,6 +2,9 @@
 
 #include <limits>
 
+namespace bicron
+{
+
 template <int min, int max>
 class Unit
 {
@@ -54,3 +57,5 @@ typedef Unit< 0, 12>                              Month;
 typedef Unit< 0, 31>                              Day;
 typedef Unit<-1, 23>                              Hour;
 typedef Unit<-1, 59>                              Minute;
+
+}

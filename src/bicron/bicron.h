@@ -5,6 +5,9 @@
 
 #include <map>
 
+namespace bicron
+{
+
 class Bicron
 {
 public:
@@ -19,3 +22,5 @@ public:
 private:
 	Config _config;
 };
+
+}

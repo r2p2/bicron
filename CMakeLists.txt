@@ -8,10 +8,10 @@ set(CLANG_MINIMUM_VERSION "3.5")
 set(CMAKE_CXX_FLAGS "-std=c++14")
 
 set (SOURCES
-	src/bicron.cc
-	src/config.cc
-	src/rule.cc
-	src/time_point.cc
+	src/bicron/bicron.cc
+	src/bicron/config.cc
+	src/bicron/rule.cc
+	src/bicron/time_point.cc
 )
 
 ### Test #######################################################################
@@ -30,7 +30,7 @@ add_executable(bicron-test
 )
 
 target_include_directories(bicron-test
-	PUBLIC src/
+	PUBLIC src/bicron
 	PUBLIC third_party/
 	Public tests/
 )
