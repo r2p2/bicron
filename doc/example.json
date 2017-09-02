@@ -1,0 +1,11 @@
+{
+  "cron": [
+    {"key": "0", "state": "off"},
+    {"key": "1", "state": "off"},
+
+    {"hour": 8, "key": "0", "state": "on"},
+    {"hour": 20, "key": "0", "state": "off"},
+    {"month": 5, "key": "1", "state": "on" },
+    {"month": 9, "key": "1", "state": "off"}
+  ]
+}
