@@ -65,5 +65,10 @@ Example:
 1:off
 ```
 
+## Built With
+
+- [Catch](https://github.com/philsquared/Catch) - Test framework
+- [Json](https://github.com/nlohmann/json) - Parsing configuration files
+
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details
