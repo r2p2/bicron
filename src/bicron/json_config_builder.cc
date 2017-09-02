@@ -44,7 +44,7 @@ Config parse(json const& j)
 			{
 				key = el.value();
 			}
-			else if (el.key() == "val")
+			else if (el.key() == "state")
 			{
 				val = el.value();
 			}

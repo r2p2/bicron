@@ -20,6 +20,7 @@ set (SOURCES
 set (SOURCES_TEST
 	tests/bicron_test.cc
 	tests/dummy_test.cc
+	tests/json_config_test.cc
 	tests/rule_test.cc
 	tests/time_point_test.cc
 	tests/main.cc
