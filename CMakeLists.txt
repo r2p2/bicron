@@ -15,6 +15,22 @@ set (SOURCES
 	src/bicron/time_point.cc
 )
 
+### Main #######################################################################
+
+set (SOURCES_MAIN
+	src/main.cc
+)
+
+add_executable(bicron
+	${SOURCES}
+	${SOURCES_MAIN}
+)
+
+target_include_directories(bicron
+	PUBLIC src/bicron
+	PUBLIC third_party/
+)
+
 ### Test #######################################################################
 
 set (SOURCES_TEST
